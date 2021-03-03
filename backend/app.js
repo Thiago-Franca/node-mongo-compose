@@ -7,7 +7,7 @@ const cors = require('cors')
 
 // Database
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://db/mydb')
+mongoose.connect('mongodb://db/mydb', {useMongoClient:true})
 
 // Middlewares
 server.use(bodyParser.urlencoded({extended:true}))
